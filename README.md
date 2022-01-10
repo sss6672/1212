@@ -1,80 +1,109 @@
-Юпи!- движок интернет-магазина на Yiiframework 1.x
-==================================================
+<h1 align="center">
+  <a href="https://animejs.com"><img src="/documentation/assets/img/animejs-v3-header-animation.gif" width="250"/></a>
+  <br>
+  anime.js
+</h1>
 
-[![Total Downloads](https://poser.pugx.org/yupe/yupe/downloads.png)](https://packagist.org/packages/yupe/yupe)
-[![Daily Downloads](https://poser.pugx.org/yupe/yupe/d/daily.png)](https://packagist.org/packages/yupe/yupe)
-[![Code Climate](https://codeclimate.com/github/yupe/yupe.png)](https://codeclimate.com/github/yupe/yupe)
+<h4 align="center">JavaScript animation engine | <a href="https://animejs.com" target="_blank">animejs.com</a></h4>
 
-Юпи! позволяет быстро и легко создавать проекты следующих типов:
+<p align="center">
+  <a href="https://www.npmjs.com/package/animejs" rel="nofollow"><img src="https://camo.githubusercontent.com/011820ee25bf1d3ddaf635d869903b98eccaeae7/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f616e696d656a732e7376673f7374796c653d666c61742d737175617265" alt="npm version" data-canonical-src="https://img.shields.io/npm/v/animejs.svg?style=flat-square" style="max-width:100%;"></a>
+  <a href="https://www.npmjs.com/package/animejs" rel="nofollow"><img src="https://camo.githubusercontent.com/3e9b69d51aee25fad784a3097676696096621d47/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f646d2f616e696d656a732e7376673f7374796c653d666c61742d737175617265" alt="npm downloads" data-canonical-src="https://img.shields.io/npm/dm/animejs.svg?style=flat-square" style="max-width:100%;"></a>
+</p>
 
-* [интернет-магазины](https://yupe.ru/ecommerce)
-* [блоги / сообщества](https://yupe.ru/ecommerce)
-* [бизнес сайты](https://yupe.ru/ecommerce)
+<blockquote align="center">
+  <em>Anime.js</em> (<code>/ˈæn.ə.meɪ/</code>) is a lightweight JavaScript animation library with a simple, yet powerful API.<br>
+  It works with CSS properties, SVG, DOM attributes and JavaScript Objects.
+</blockquote>
+
+<p align="center">
+  <a href="#getting-started">Getting started</a>&nbsp;|&nbsp;<a href="#documentation">Documentation</a>&nbsp;|&nbsp;<a href="#demos-and-examples">Demos and examples</a>&nbsp;|&nbsp;<a href="#browser-support">Browser support</a>
+</p>
+
+## Getting started
+
+### Download
+
+Via npm
+
+```bash
+$ npm install animejs --save
+```
+
+or manual [download](https://github.com/juliangarnier/anime/archive/master.zip).
+
+### Usage
+
+#### ES6 modules
+
+```javascript
+import anime from 'animejs/lib/anime.es.js';
+```
+
+#### CommonJS
+
+```javascript
+const anime = require('animejs');
+```
+
+#### File include
+
+Link `anime.min.js` in your HTML :
+
+```html
+<script src="anime.min.js"></script>
+```
+
+### Hello world
+
+```javascript
+anime({
+  targets: 'div',
+  translateX: 250,
+  rotate: '1turn',
+  backgroundColor: '#FFF',
+  duration: 800
+});
+```
+
+## [Documentation](https://animejs.com/documentation/)
+
+* [Targets](https://animejs.com/documentation/#cssSelector)
+* [Properties](https://animejs.com/documentation/#cssProperties)
+* [Property parameters](https://animejs.com/documentation/#duration)
+* [Animation parameters](https://animejs.com/documentation/#direction)
+* [Values](https://animejs.com/documentation/#unitlessValue)
+* [Keyframes](https://animejs.com/documentation/#animationKeyframes)
+* [Staggering](https://animejs.com/documentation/#staggeringBasics)
+* [Timeline](https://animejs.com/documentation/#timelineBasics)
+* [Controls](https://animejs.com/documentation/#playPause)
+* [Callbacks and promises](https://animejs.com/documentation/#update)
+* [SVG Animations](https://animejs.com/documentation/#motionPath)
+* [Easing functions](https://animejs.com/documentation/#linearEasing)
+* [Helpers](https://animejs.com/documentation/#remove)
+
+## [Demos and examples](http://codepen.io/collection/b392d3a52d6abf5b8d9fda4e4cab61ab/)
+
+* [CodePen demos and examples](http://codepen.io/collection/b392d3a52d6abf5b8d9fda4e4cab61ab/)
+* [juliangarnier.com](http://juliangarnier.com)
+* [animejs.com](https://animejs.com)
+* [Moving letters](http://tobiasahlin.com/moving-letters/) by [@tobiasahlin](https://twitter.com/tobiasahlin)
+* [Gradient topography animation](https://tympanus.net/Development/GradientTopographyAnimation/) by [@crnacura](https://twitter.com/crnacura)
+* [Organic shape animations](https://tympanus.net/Development/OrganicShapeAnimations/) by [@crnacura](https://twitter.com/crnacura)
+* [Pieces slider](https://tympanus.net/Tutorials/PiecesSlider/) by [@lmgonzalves](https://twitter.com/lmgonzalves)
+* [Staggering animations](https://codepen.io/juliangarnier/pen/4fe31bbe8579a256e828cd4d48c86182?editors=0100)
+* [Easings animations](https://codepen.io/juliangarnier/pen/444ed909fd5de38e3a77cc6e95fc1884)
+* [Sphere animation](https://codepen.io/juliangarnier/pen/b3bb8ca599ad0f9d00dd044e56cbdea5?editors=0010)
+* [Layered animations](https://codepen.io/juliangarnier/pen/6ca836535cbea42157d1b8d56d00be84?editors=0010)
+* [anime.js logo animation](https://codepen.io/juliangarnier/pen/d43e8ec355c30871cbe775193255d6f6?editors=0010)
 
 
-На Юпи! работает более 30000 проектов, среди которых более 15000 интернет-магазинов, Юпи! активно используют студии и команды разработчиков.
+## Browser support
 
-Прежде всего Юпи! рассчитан на PHP-разработчиков, знакомых с Yiiframework 1.x.
+| Chrome | Safari | IE / Edge | Firefox | Opera |
+| --- | --- | --- | --- | --- |
+| 24+ | 8+ | 11+ | 32+ | 15+ |
 
+## <a href="https://animejs.com"><img src="/documentation/assets/img/animejs-v3-logo-animation.gif" width="150" alt="anime-js-v3-logo"/></a>
 
-[Процесс установки](http://docs.yupe.ru/install/) очень прост и занимает не более 5 минут!
-
-Для успешной работы проекта на Юпи! вполне достаточно самого простого и [дешевого хостинга](https://yupe.ru/service/hosting), минимальные требования:
-
-* PHP >= 7.0
-* Composer
-* MySQL 5.x
-* Apaсhe/Nginx
-* Yiiframework 1.x
-
-Рекомендуем хостинг от [timeweb](http://timeweb.com/ru/services/hosting/?i=28284) или виртуальные сервера от [firstvds](https://firstvds.ru/?from=442205)
-
-Ссылки
-------
-* [Официальный сайт](https://yupe.ru/)
-* [Демо](https://demo.yupe.ru/)  
-* [Чат](https://t.me/yupe_team)
-* [Блог Юпи!](https://yupe.ru/posts)
-* [Документация](https://docs.yupe.ru/)
-* [Подробнее о проекте](https://yupe.ru/about)
-* [Команда](https://docs.yupe.ru/team/)
-* [Контакты](https://yupe.ru/contacts)
-* [Как помочь проекту](http://docs.yupe.ru/assistance.project/)
-* [Twitter](https://twitter.com/#!/YupeCms)
-* [Группа Вконтакте](https://vk.com/yupecms)
-* [Разработка](https://yupe.ru/service/development) и [поддержка](https://yupe.ru/service/support)
-
-
-Возможности
------------
-
-Из коробки Вы получаете каркас Yii-приложения, со следующим функционалом (всё разделено на модули - используйте только то, что необходимо):
-
-* Интернет-магазин (каталог, корзина, заказы, купоны, платежные системы
-* Регистрация, аутентификация, восстановление пароля
-* Управление пользователями (блокировка, активация, редактирование и т.д.) через административный интерфейс
-* Модуль для ведения блогов (как индивидуальных, так и коллективных
-* Создание и публикация новостей
-* Создание и управление страницами сайта
-* Создание и управление категориями сайта (разделами)
-* Создание и редактирование меню сайта
-* Древовидные комментарии
-* Модуль простых справочников (хранение и управление справочной информацией) 
-* Модуль для "Обратной связи" + раздел FAQ
-* Модуль для работы с блоками контента
-* Wiki - работает через модуль yeeki
-* Удобная админка на Twitter Bootstrap
-* Возможность генерировать CRUD в стиле Twitter Bootstrap
-* Авторизация через социальные сети (с использованием nodge/yii-eauth)
-
-**Если вам не хватает какой-то функциональности - [напишите нам](https://yupe.ru/contacts) и мы Вам обязательно поможем!**
-
-
-Лицензия
---------
-
-Исходный код, макеты дизайна и вёрстка распространяются по [лицензии BSD](http://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F_BSD).
-
-Сообщество будет благодарно если на сайте будет присутствовать ссылка на [https://yupe.ru](https://yupe.ru)
-
-(c) 2012 - 2021 [yupe](https://yupe.ru) && [Yupe! team](https://yupe.ru)
+[Website](https://animejs.com/) | [Documentation](https://animejs.com/documentation/) | [Demos and examples](http://codepen.io/collection/b392d3a52d6abf5b8d9fda4e4cab61ab/) | [MIT License](LICENSE.md) | © 2019 [Julian Garnier](http://juliangarnier.com).
